@@ -57,7 +57,7 @@ Deploy the Spring PetClinic application to Azure cloud infrastructure using Azur
 
 ### Phase 2: Application Configuration for Azure
 
-4. [ ] **Task 2.1**: Create Azure-specific application profile
+4. [x] **Task 2.1**: Create Azure-specific application profile
    - Files: `src/main/resources/application-azure.properties`
    - Details:
      - Configure PostgreSQL connection using Azure environment variables
@@ -85,7 +85,7 @@ Deploy the Spring PetClinic application to Azure cloud infrastructure using Azur
 
 ### Phase 3: Containerization & Build
 
-7. [ ] **Task 3.1**: Create production-ready container image
+7. [x] **Task 3.1**: Create production-ready container image
    - Files: `Dockerfile` (optional, can use buildpacks)
    - Details:
      - Use Spring Boot buildpack integration (`./mvnw spring-boot:build-image`)
@@ -137,7 +137,7 @@ Deploy the Spring PetClinic application to Azure cloud infrastructure using Azur
 
 ### Phase 6: CI/CD Pipeline
 
-13. [ ] **Task 6.1**: Create GitHub Actions workflow
+13. [x] **Task 6.1**: Create GitHub Actions workflow
     - Files: `.github/workflows/azure-deploy.yml`
     - Details:
       - Build application (Maven/Gradle)
