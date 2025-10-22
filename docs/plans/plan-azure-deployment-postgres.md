@@ -8,7 +8,7 @@ sprint: 1
 delegate_to_agent: true
 agent_tasks: 3
 tasks_total: 14
-tasks_completed: 6
+tasks_completed: 8
 agent_issues: [1]
 ---
 
@@ -120,7 +120,7 @@ Deploy the Spring PetClinic application to Azure cloud infrastructure using Azur
 
 ### Phase 5: Monitoring & Observability
 
-11. [ ] **Task 5.1**: Integrate Application Insights
+11. [x] **Task 5.1**: Integrate Application Insights
     - Files: `pom.xml`, `build.gradle`, `application-azure.properties`
     - Details:
       - Add Application Insights Java agent
@@ -128,7 +128,7 @@ Deploy the Spring PetClinic application to Azure cloud infrastructure using Azur
       - Enable distributed tracing
     - Agent: No
 
-12. [ ] **Task 5.2**: Configure health checks and metrics
+12. [x] **Task 5.2**: Configure health checks and metrics
     - Files: `application-azure.properties`
     - Details:
       - Ensure actuator endpoints are accessible
