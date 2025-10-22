@@ -240,6 +240,31 @@ Signed-off-by: Your Name <your.email@example.com>
 4. Write clear, descriptive commit message
 5. Include `Signed-off-by` trailer (required by DCO)
 
+## Structured Development Workflow
+
+### Custom AI Prompts
+This project includes structured prompts for goal-oriented development in `.github/prompts/`:
+
+**Available workflows**:
+- `/create-goal-plan` - Create implementation plans with task breakdown, agent delegation, and acceptance criteria
+- `/implement-plan <name>` - Execute plans with atomic commits and parallel agent tasks
+- `/list-plans [status]` - View all plans and their progress
+
+**When to use**:
+- Starting new features or significant changes
+- Azure migration tasks
+- Multi-step implementations requiring coordination
+- Work that can be parallelized (core implementation + tests/docs)
+
+**Plan structure** (`docs/plans/plan-*.md`):
+- Tasks with clear dependencies
+- Files to modify/create
+- Testing strategy
+- Agent-delegatable work (unit tests, docs, refactoring)
+- Acceptance criteria
+
+See `docs/PROMPTS.md` for detailed workflow guide.
+
 ## Contributing Standards
 
 ### Commit Requirements

@@ -1,0 +1,26 @@
+# Implementation Plans Directory
+
+This directory contains goal-oriented implementation plans for the Spring PetClinic application.
+
+## Plan Lifecycle
+
+1. **Create**: Use `/create-goal-plan` to create a new plan
+2. **Review**: Developer reviews and approves the plan
+3. **Implement**: Use `/implement-plan <name>` to execute the plan
+4. **Track**: Plans maintain status (pending → in-progress → completed)
+
+## Plan Statuses
+
+- `pending` - Plan created, ready to implement
+- `in-progress` - Currently being implemented
+- `completed` - Implementation finished
+- `blocked` - Implementation paused due to blocker
+
+## File Naming Convention
+
+Plans are named: `plan-{goal-slug}.md`
+
+Examples:
+- `plan-azure-deployment.md`
+- `plan-add-rest-api.md`
+- `plan-email-notifications.md`
