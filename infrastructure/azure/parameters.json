@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus"
+    },
+    "applicationName": {
+      "value": "petclinic"
+    },
+    "environmentName": {
+      "value": "dev"
+    },
+    "appServicePlanSku": {
+      "value": "B1"
+    },
+    "postgresSku": {
+      "value": "Standard_B1ms"
+    },
+    "postgresVersion": {
+      "value": "14"
+    },
+    "dbAdminLogin": {
+      "value": "petclinicadmin"
+    },
+    "dbAdminPassword": {
+      "reference": {
+        "keyVault": {
+          "id": ""
+        },
+        "secretName": "postgres-admin-password"
+      }
+    }
+  }
+}

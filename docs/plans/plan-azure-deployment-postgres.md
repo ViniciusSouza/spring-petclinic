@@ -33,7 +33,7 @@ Deploy the Spring PetClinic application to Azure cloud infrastructure using Azur
 
 ### Phase 1: Azure Infrastructure Setup (IaC)
 
-1. [ ] **Task 1.1**: Create Azure resource provisioning scripts
+1. [x] **Task 1.1**: Create Azure resource provisioning scripts
    - Files: `infrastructure/azure/main.bicep`, `infrastructure/azure/parameters.json`
    - Details: 
      - Define Resource Group
