@@ -1,7 +1,13 @@
 ---
 mode: 'agent'
 description: 'Execute a structured implementation plan for Spring PetClinic. Implements tasks step-by-step with atomic commits, delegates parallelizable work to GitHub Copilot Agent via issues, validates code, and tracks progress.'
-tools: ['edit/editFiles', 'edit/createFile', 'read', 'run_in_terminal', 'github/createIssue', 'github/updateIssue', 'git', 'todos']
+tools:
+  - 'read'
+  - 'edit'
+  - 'terminal'
+  - 'github'
+  - 'todos'
+  - 'search'
 ---
 
 # Implement Plan
