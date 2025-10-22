@@ -146,9 +146,6 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2023-03-01-pr
     highAvailability: {
       mode: environment == 'prod' ? 'ZoneRedundant' : 'Disabled'
     }
-    network: {
-      publicNetworkAccess: enablePostgresPublicAccess ? 'Enabled' : 'Disabled'
-    }
   }
 }
 
