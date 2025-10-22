@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environment": {
+      "value": "dev"
+    },
+    "location": {
+      "value": "eastus"
+    },
+    "baseName": {
+      "value": "petclinic"
+    },
+    "postgresAdminLogin": {
+      "value": "petclinicadmin"
+    },
+    "postgresAdminPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/{subscription-id}/resourceGroups/{rg-name}/providers/Microsoft.KeyVault/vaults/{kv-name}"
+        },
+        "secretName": "postgres-admin-password"
+      }
+    },
+    "postgresDatabaseName": {
+      "value": "petclinic"
+    },
+    "postgresSku": {
+      "value": "Standard_B1ms"
+    },
+    "postgresStorageSizeGB": {
+      "value": 32
+    },
+    "appServiceSku": {
+      "value": "B1"
+    },
+    "appInsightsRetentionDays": {
+      "value": 30
+    },
+    "enablePostgresPublicAccess": {
+      "value": false
+    },
+    "tags": {
+      "value": {
+        "application": "spring-petclinic",
+        "environment": "dev",
+        "owner": "development-team",
+        "cost-center": "engineering"
+      }
+    }
+  }
+}
