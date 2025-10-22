@@ -1,11 +1,16 @@
 ---
 goal: "Deploy Spring PetClinic to Azure with PostgreSQL"
-status: pending
+status: in-progress
 created: 2025-10-22
+started: 2025-10-22
 estimated_effort: medium
 sprint: 1
 delegate_to_agent: true
 agent_tasks: 3
+tasks_total: 14
+tasks_completed: 0
+agent_tasks_completed: 0
+agent_issues: []
 ---
 
 # Implementation Plan: Deploy Spring PetClinic to Azure with PostgreSQL
