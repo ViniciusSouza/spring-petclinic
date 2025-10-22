@@ -9,6 +9,7 @@ delegate_to_agent: true
 agent_tasks: 3
 tasks_total: 14
 tasks_completed: 6
+agent_issues: [1]
 ---
 
 # Implementation Plan: Deploy Spring PetClinic to Azure with PostgreSQL
@@ -178,7 +179,7 @@ Deploy the Spring PetClinic application to Azure cloud infrastructure using Azur
      - Validate Managed Identity permissions
    - Dependencies: Task 1.3 (Infrastructure deployed)
 
-3. [ ] **Agent Task 3**: Generate Bicep template documentation
+3. [ ] **Agent Task 3**: Generate Bicep template documentation - **Issue #1**
    - Type: documentation
    - Files: `infrastructure/azure/README.md`
    - Instructions:
@@ -186,7 +187,7 @@ Deploy the Spring PetClinic application to Azure cloud infrastructure using Azur
      - Explain resource relationships
      - Provide examples for different environments
      - Document naming conventions
-   - Dependencies: Task 1.1 (Bicep templates created)
+   - Dependencies: Task 1.1 (Bicep templates created) ✅
 
 ## 📁 Files to Modify/Create
 
