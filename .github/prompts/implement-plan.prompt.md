@@ -64,9 +64,8 @@ You are helping implement a structured plan for the Spring PetClinic application
       - "Starting: {Task description}"
    
    b) **Implement following best practices**:
-      - Follow Spring PetClinic conventions (package-private controllers, direct repository access, etc.)
-      - Apply null safety annotations (`@Nullable`, `@NullMarked`)
-      - Use constructor injection
+      - Follow projects code conventions depending on the current language
+      - Ensure null safety, proper error handling, and logging
       - Create tests for new features
    
    c) **Create atomic commits**:
@@ -76,13 +75,10 @@ You are helping implement a structured plan for the Spring PetClinic application
         - "Add: REST endpoint for owner search"
         - "Implement: Owner email validation"
         - "Test: Add integration tests for owner API"
-      - Include `Signed-off-by` trailer
    
    d) **Run validation after each commit**:
-      ```bash
-      ./mvnw spring-javaformat:apply    # Format code
-      ./mvnw verify                      # Run tests
-      ```
+      - Format the code
+      - Ensure no compilation errors
    
    e) **Update plan file**:
       - Mark task as completed: `- [x] Task description`
@@ -90,11 +86,13 @@ You are helping implement a structured plan for the Spring PetClinic application
    
    f) **Check for dependent agent tasks**:
       - After completing a task, check if any agent tasks depend on it
-      - If dependencies are met, create GitHub issue for the agent task
+      - If dependencies are met, create GitHub issue for the agent task, Remember the current branch must be up to date before creating the issue.
 
 6. **Delegate to GitHub Copilot Agent**:
    
    **When agent task dependencies are met**:
+
+   IMPORTANT: The current branch must be up to date before creating the issue.
    
    a) **Create GitHub issue for agent task**:
       - Use issue title format: `[Agent] {Task description}`
@@ -137,7 +135,9 @@ You are helping implement a structured plan for the Spring PetClinic application
 7. **Monitor Agent Progress**:
    - Periodically check agent task status
    - When agent completes a task (creates PR):
-     - Review the PR
+     - Set the PR as ready for review
+     - Notify user: "Agent task #{issue-number} has a PR ready for review:
+     - Review the PR, adding comments if needed
      - Merge if acceptable
      - Mark agent task as complete in plan: `- [x] **Agent Task 1** - Issue #123 (PR #124 merged)`
      - Commit: "Update plan: Agent task #{issue-number} completed"
@@ -182,11 +182,9 @@ You are helping implement a structured plan for the Spring PetClinic application
      - Add `completed: {date}` to metadata
      - Update `agent_tasks_completed: {count}` in metadata
      - Run final validation:
-       ```bash
-       ./mvnw spring-javaformat:apply
-       ./mvnw verify
-       ./gradlew check  # Verify Gradle build too
-       ```
+         - Format code
+         - Ensure no compilation errors
+         - Run all tests
      - Create summary commit: "Complete: {goal title}"
      - Ask: "🎉 Implementation complete! Would you like me to:
        a) Create a summary of changes
@@ -205,18 +203,6 @@ Before marking any task complete:
 - [ ] No compilation errors or test failures
 - [ ] Atomic commit with clear message
 
-### Testing Strategy
-- Use `PetClinicIntegrationTests.main()` for rapid feedback during development
-- Create proper `@Test` methods for CI/CD
-- Use AssertJ assertions (`assertThat()`)
-
-### Azure-Specific Considerations
-If implementing Azure-related plans:
-- Use Azure SDK libraries compatible with Spring Boot 4.0.0-M3
-- Externalize configuration (don't hardcode Azure connection strings)
-- Support local development (use profiles or environment variables)
-- Add proper error handling for Azure service calls
-- Document Azure prerequisites in the plan
 
 ## Plan Metadata Format
 
@@ -297,17 +283,9 @@ Main implementation: Issue #{parent-issue} (if exists)
 ## 📋 Instructions for Copilot Agent
 {Step-by-step instructions}
 
-Example test structure:
-\```java
-@SpringBootTest
-class OwnerControllerTests {
-    // Test setup
-    // Test cases
-}
-\```
+{Add code samples if needed}
 
-## 🧪 Testing
-Run: `./mvnw test -Dtest={TestClass}`
+{Add instructions to test the implementation}
 
 @copilot
 ```

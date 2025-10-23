@@ -88,12 +88,12 @@ agent_tasks: {number}
 
 ### Phase 1: {Phase Name}
 1. [ ] **Task 1**: {Description}
-   - Files: `path/to/file.java`
+   - Files: `path/to/file`
    - Details: {specific implementation notes}
    - Agent: No
 
 2. [ ] **Task 2**: {Description}
-   - Files: `path/to/file.java`
+   - Files: `path/to/file`
    - Details: {specific implementation notes}
    - Agent: No
 
@@ -106,27 +106,27 @@ Tasks that can be delegated to GitHub Copilot Agent for parallel execution:
 
 1. [ ] **Agent Task 1**: {Description}
    - Type: {unit-tests|integration-tests|documentation|refactoring}
-   - Files: `path/to/file.java`
+   - Files: `path/to/file`
    - Instructions: {Specific instructions for the agent}
    - Dependencies: {Task IDs this depends on}
 
 2. [ ] **Agent Task 2**: {Description}
    - Type: {unit-tests|integration-tests|documentation|refactoring}
-   - Files: `path/to/file.java`
+   - Files: `path/to/file`
    - Instructions: {Specific instructions for the agent}
    - Dependencies: {Task IDs this depends on}
 
 ## 📁 Files to Modify/Create
 
 ### New Files
-- `src/main/java/.../{NewClass}.java` - {Purpose}
+- `path.../{NewClass}` - {Purpose}
 
 ### Modified Files
-- `src/main/java/.../{ExistingClass}.java` - {Changes needed}
+- `path.../{ExistingClass}` - {Changes needed}
 
 ### Configuration
-- `application.properties` - {New properties}
-- `pom.xml` / `build.gradle` - {Dependencies}
+- `configuration file` - {New properties}
+- `packaging file` - {Dependencies}
 
 ## 🧪 Testing Strategy
 1. **Unit Tests**: {What to test}
@@ -141,7 +141,7 @@ Tasks that can be delegated to GitHub Copilot Agent for parallel execution:
 - [ ] {Criterion 1}
 - [ ] {Criterion 2}
 - [ ] All tests pass
-- [ ] Code formatted with `./mvnw spring-javaformat:apply`
+- [ ] Code formatted with `{tool used}`
 - [ ] Documentation updated
 - [ ] All agent tasks completed
 
@@ -179,11 +179,11 @@ Each agent task should be specific enough to execute independently:
 ## Context Awareness
 
 When creating plans, consider:
-- **Current Architecture**: Package-by-feature structure, no service layer
-- **Technology Stack**: Spring Boot 4.0.0-M3, Java 17+, JPA, Thymeleaf
-- **Code Standards**: Spring Java Format, null safety with `@NullMarked`
-- **Testing Approach**: Test main() methods + JUnit integration tests
-- **Build System**: Both Maven and Gradle (keep in sync)
+- **Current Architecture**: code structure, no service layer
+- **Technology Stack**: like Spring Boot version, Java version, .NET version etc.
+- **Code Standards**: follow existing patterns and conventions and best practices of the language/framework
+- **Testing Approach**: new feature must include unit and integration tests when needed
+- **Build System**: use the project build tool (Maven, Gradle, Make etc.) and dependency management
 - **Azure Cloud Migration Context**: If goal relates to Azure, consider:
   - Azure-specific services (App Service, Container Apps, SQL Database, etc.)
   - Configuration externalization (Azure App Configuration, Key Vault)

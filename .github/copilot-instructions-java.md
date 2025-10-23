@@ -221,3 +221,16 @@ Deployment configs in `k8s/`:
 ### Build Profiles
 - Maven CSS profile: `./mvnw package -P css`
 - No Gradle CSS profile available
+
+### Testing Strategy
+- Use `PetClinicIntegrationTests.main()` for rapid feedback during development
+- Create proper `@Test` methods for CI/CD
+- Use AssertJ assertions (`assertThat()`)
+
+### Azure-Specific Considerations
+If implementing Azure-related plans:
+- Use Azure SDK libraries compatible with Spring Boot 4.0.0-M3
+- Externalize configuration (don't hardcode Azure connection strings)
+- Support local development (use profiles or environment variables)
+- Add proper error handling for Azure service calls
+- Document Azure prerequisites in the plan
